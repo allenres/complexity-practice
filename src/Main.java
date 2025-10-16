@@ -198,13 +198,7 @@ public class Main {
   // What is the time complexity of this method?
   // assume that each String is bounded by a constant length
   // (assume the set and list have the same number of elements)
-<<<<<<< HEAD
   // O(n^2) where n = length of wordset
-=======
-  // O(n)
-  // n = wordSet size
-  // YOUR ANSWER HERE
->>>>>>> bd0835524b665e0e149dccbf2f9b561e5f5e8378
   public static boolean hasCommon(HashSet<String> wordSet, ArrayList<String> wordList) {
     for (String word : wordSet) {
       if (wordList.contains(word)) {
