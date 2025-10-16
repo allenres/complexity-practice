@@ -60,6 +60,7 @@ public class Main {
   }
 
   // The time complexity is:
+  // O(n)
   // YOUR ANSWER HERE
   public static int computeFactorial(int n) {
     int result = 1;
@@ -70,6 +71,8 @@ public class Main {
   }
 
   // Assume that the largest number is no bigger than the length
+  // O(n)
+  // n = nums
   // of the array
   public static void computeAllFactorials(int[] nums) {
     for (int num : nums) {
