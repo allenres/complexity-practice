@@ -210,6 +210,7 @@ public class Main {
   // What is the time complexity of your new solution?
   // YOUR ANSWER HERE
   public static boolean hasCommonEfficient(HashSet<String> wordSet, ArrayList<String> wordList) {
+
     return false;
   }
 
