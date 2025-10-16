@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class Main {
@@ -181,17 +182,23 @@ public class Main {
   // not found" if appropriate
   // assume that each String is bounded by a constant length
   // What is the time complexity of your solution?
-  // YOUR ANSWER HERE
-  // O(1)
-  //
+  // O(n), where n = entries in namesToEmails
+
   public static String emailLookupEfficient(HashMap<String, String> namesToEmails, String queryName) {
-    return null;
+    for (Map.Entry<String, String> entry : namesToEmails.entrySet()) {
+      String key = entry.getKey();
+      String value = entry.getValue();
+      if(key.equals(queryName)) {
+        return value;
+      }
+    }
+    return "Person not found";
   }
 
   // What is the time complexity of this method?
   // assume that each String is bounded by a constant length
   // (assume the set and list have the same number of elements)
-  // YOUR ANSWER HERE
+  // O(n^2) where n = length of wordset
   public static boolean hasCommon(HashSet<String> wordSet, ArrayList<String> wordList) {
     for (String word : wordSet) {
       if (wordList.contains(word)) {
@@ -206,8 +213,19 @@ public class Main {
   // Do not change the datatype of wordSet or wordList.
   // assume that each String is bounded by a constant length
   // What is the time complexity of your new solution?
-  // YOUR ANSWER HERE
+  // O(n), where n = length of wordList
   public static boolean hasCommonEfficient(HashSet<String> wordSet, ArrayList<String> wordList) {
+    Set<String> wordSet2 = new HashSet<>();
+
+    for(String word : wordList) {
+      wordSet2.add(word);
+    }
+
+    for (String word : wordSet) {
+      if (wordSet2.contains(word)) {
+        return true;
+      }
+    }
     return false;
   }
 
@@ -219,7 +237,7 @@ public class Main {
   // and access the current price for each stock. The order of the ticker symbols
   // is not important.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // HashMap
 
   // Suppose you are building a music player application where users can create
   // playlists.
@@ -229,7 +247,7 @@ public class Main {
   // accessing them by
   // their position in the playlist.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // List
 
   // Suppose you are developing a search feature that keeps track of the user's
   // recent search queries. You want to store the queries in the order they were
@@ -240,5 +258,5 @@ public class Main {
   // searches than
   // to optimize for fast lookups or deletions.
   // What would be a good choice of data structure?
-  // YOUR ANSWER HERE
+  // TreeSet
 }
