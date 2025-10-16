@@ -163,6 +163,8 @@ public class Main {
   // assume that each String is bounded by a constant length
   // What is the time complexity of this method?
   // YOUR ANSWER HERE
+  // O(n)
+  // n = names.length
   public static String emailLookup(String[] names, String[] emails, String queryName) {
     for (int i = 0; i < names.length; i++) {
       if (names[i].equals(queryName)) {
@@ -180,6 +182,8 @@ public class Main {
   // assume that each String is bounded by a constant length
   // What is the time complexity of your solution?
   // YOUR ANSWER HERE
+  // O(1)
+  //
   public static String emailLookupEfficient(HashMap<String, String> namesToEmails, String queryName) {
     return null;
   }
